@@ -22,7 +22,7 @@ public class Main {
                 "«Однако\n" +
                 "Какой он ужасный\n" +
                 "Бяка…»";
-        System.out.println(StringService.noByaka(str3, "Бяка"));
+        System.out.println(StringService.noByaka(str3, "Бяка", "[вырезано цензурой]"));
 
         // 4
         System.out.println(StringService.numberOfSubstrings(str3, "Бука"));

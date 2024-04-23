@@ -30,8 +30,8 @@ public class StringService {
     }
 
     // 3
-    public static String noByaka(String str) {
-        str = str.replaceAll("Бяка", "[вырезано цензурой]");
+    public static String noByaka(String str, String w) {
+        str = str.replaceAll(w, "[вырезано цензурой]");
         return str;
     }
 

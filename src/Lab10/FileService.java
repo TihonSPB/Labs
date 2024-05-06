@@ -12,14 +12,22 @@ public class FileService {
     // 1
     public static void createTextFile(String fileName, String text) {
 
+        FileWriter writer = null;
         try {
-            FileWriter writer = new FileWriter(path + fileName + format);
+            writer = new FileWriter(path + fileName + format);
             writer.write(text);
-            writer.close();
             System.out.println("Файл создан");
         } catch (IOException e) {
             System.out.println("Ошибка при создании файла");
             System.err.println(e.getMessage());
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.close();
+                }
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
+            }
         }
     }
 
